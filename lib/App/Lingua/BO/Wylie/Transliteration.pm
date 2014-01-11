@@ -176,12 +176,14 @@ method _build_VOWEL {+{
     U => "\N{TIBETAN VOWEL SIGN U}",
 }};
 
+=for Pod::Coverage make_rx
+=cut
+
 sub make_rx {
     my $hash = shift;
     $_ = join '|',
          sort  { length $b <=> length $a }
          keys %{ $hash };
-    # p $_;
     $_ = '(?:' . $_ . ')';
     return qr{$_}ix;
 }
@@ -278,7 +280,7 @@ Wylie transliterate can be used to transliterate words from Wylie Transliteratio
 = BACKGROUND
 
 When you have one (foreign) alphabet and would like to display it in a
-different alphabet (example: Russian -> Latin alphabet), you will
+different alphabet (example: Russian to Latin alphabet), you will
 want to use a certain *transliteration scheme*.
 
 Just compare all the different names you can find "Dostojevski" transliterated
@@ -320,9 +322,8 @@ need to be added in the proper places.
 For the rest of the symbols that can be added, the scheme looks the following:
 
         b  s  g   r   u   b  s
-
+        |  |  |   |   |   |  |
         1  2  3   4   5   6  7
-        [ add graphic of places here ]
 
 With the places being the following:
 
@@ -342,7 +343,7 @@ Note: Optional character *can* form *ligatures* with the character they are comb
 
 The Unicode consortium had to decide what they want their code points to look like:
 
-a) either each altered base syllable is represented (i.e. ka, ko, ke, ki, ku) as a seperate character (code point)
+a) either each altered base syllable is represented (i.e. ka, ko, ke, ki, ku) as a separate character (code point)
 b) the base syllables are represented and the altered syllables will be merged
 
 Since it was chosen for the latter, this has a few consequences:
