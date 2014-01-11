@@ -23,8 +23,8 @@ while (<>) {
 __END__
 # my @test = qw[bsgrubs];
 # KA    KHA   GA    GHA   NGA   CA    CHA   JA    NYA   TTA   TTHA  DDA   DDHA
-# NNA   TA    THA   DA    DHA   NA    PA    PHA   BA    BHA   MA    TSA   TSHA  
-# DZA   DZHA  WA    ZHA   ZA    YA    RA    LA    SHA   SSA   SA    HA    A KSSA  
+# NNA   TA    THA   DA    DHA   NA    PA    PHA   BA    BHA   MA    TSA   TSHA
+# DZA   DZHA  WA    ZHA   ZA    YA    RA    LA    SHA   SSA   SA    HA    A KSSA
 # kugs bsgrubs kyo dbu deg deb dom nang das bkads bskads bskeds bskengs brkengs skengs grungs de bde bdegs bdengs bskyads bskyeds bsklings kyugs kyo ko k khwo
 # kog kogs kags klugs sklugs dbu can de kyo bde
 

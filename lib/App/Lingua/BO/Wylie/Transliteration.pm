@@ -198,7 +198,7 @@ method _build_VOWEL_RX       { make_rx( $self->VOWEL       ) };
 method _build_scheme {
     qr"
       (?:
-    
+
         (?<script> @{[ $self->SCRIPT_RX      ]}   )
         (?<sub>    @{[ $self->SUBSCRIPT_RX   ]} ? )
         (?<vowel>  @{[ $self->VOWEL_RX       ]}   )
@@ -233,7 +233,7 @@ method _build_scheme {
 method transliterate($word) {
     no strict;
     no warnings;
-    my $output = 
+    my $output =
     $word =~ s( @{[$self->scheme]} )[
         my $o;
         my $pre    //= $+{pre    };
@@ -243,7 +243,7 @@ method transliterate($word) {
         my $vowel  //= $+{vowel  };
         my $post1  //= $+{post1  };
         my $post2  //= $+{post2  };
-      
+
         # say "word  : $word  ";
         # say "pre   : $pre   ";
         # say "super : $super ";
@@ -319,8 +319,8 @@ need to be added in the proper places.
 
 For the rest of the symbols that can be added, the scheme looks the following:
 
-        b  s  g   r   u   b  s 
-        
+        b  s  g   r   u   b  s
+
         1  2  3   4   5   6  7
         [ add graphic of places here ]
 
@@ -354,7 +354,7 @@ Since it was chosen for the latter, this has a few consequences:
 Even if you find the ligatures not mixed together well (e.g. on your shell),
 you can still copy-paste the results somewhere else where you have a proper
 font available. Since only the code points are represented and it is up to the font
-to build the ligatures you will find the copy-pasted result come out very well with 
+to build the ligatures you will find the copy-pasted result come out very well with
 a proper font having the ligatures available.
 
 Copy-pasting your results [here](http://www.thlib.org/reference/transliteration/wyconverter.php) might help should the tibetan signs not be rendered correctly on your shell
@@ -362,7 +362,7 @@ Copy-pasting your results [here](http://www.thlib.org/reference/transliteration/
 = USAGE
 
     echo bsgrubs | wylie-transliterate
-    
+
 or
 
   wylie-transliterate <FILE>
@@ -387,7 +387,7 @@ I am in *no way* any expert in Classical Tibetan. I can't even read one sentence
 
 But I can decipher one word!
 
-This module was written in the spirit of my fascination with the interesting 
+This module was written in the spirit of my fascination with the interesting
 system of this language and I would love to learn it for real some day.
 
 Please, if you are an expert and you find any errors, fixes, whatever -- I call
